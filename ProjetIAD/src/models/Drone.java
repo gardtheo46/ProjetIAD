@@ -6,8 +6,6 @@ public class Drone {
 
     private Integer porteeMax;
 
-    private Integer distanceToBase;
-
     private Integer distanceVision;
 
     private Case caseBase;
@@ -22,9 +20,8 @@ public class Drone {
 
     private boolean explorer;
 
-    public Drone(Integer porteeMax, Integer distanceToBase, Integer distanceVision, Case caseBase) {
+    public Drone(Integer porteeMax, Integer distanceVision, Case caseBase) {
         this.porteeMax = porteeMax;
-        this.distanceToBase = distanceToBase;
         this.distanceVision = distanceVision;
         this.caseBase = caseBase;
         this.caseActuelle = caseBase;
@@ -40,14 +37,6 @@ public class Drone {
 
     public void setPorteeMax(Integer porteeMax) {
         this.porteeMax = porteeMax;
-    }
-
-    public Integer getDistanceToBase() {
-        return distanceToBase;
-    }
-
-    public void setDistanceToBase(Integer distanceToBase) {
-        this.distanceToBase = distanceToBase;
     }
 
     public Integer getDistanceVision() {
