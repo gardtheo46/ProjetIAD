@@ -7,9 +7,13 @@ public class Case {
 
     private boolean isAvailable;
 
+    private Double coefPassage;
+
     public Case(Integer x,Integer y){
         this.x = x;
         this.y = y;
+        this.isAvailable = true;
+        this.coefPassage = 0.00;
     }
 
     public Integer getX() {
@@ -34,6 +38,14 @@ public class Case {
 
     public void setAvailable(boolean available) {
         isAvailable = available;
+    }
+
+    public Double getCoefPassage() {
+        return coefPassage;
+    }
+
+    public void setCoefPassage(Double coefPassage) {
+        this.coefPassage = coefPassage;
     }
 
     @Override
