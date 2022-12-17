@@ -1,5 +1,7 @@
 package models;
 
+import Constantes.ConstantesDeplacement;
+
 public class Drone {
 
     private Integer porteeMax;
@@ -11,6 +13,8 @@ public class Drone {
     private Case caseBase;
 
     private Case caseActuelle;
+
+    private String dernierDeplacement;
 
     private Integer distanceParcourue;
 
@@ -24,6 +28,7 @@ public class Drone {
         this.distanceVision = distanceVision;
         this.caseBase = caseBase;
         this.caseActuelle = caseBase;
+        this.dernierDeplacement = ConstantesDeplacement.AUCUN;
         this.distanceParcourue = 0;
         this.nbCiblesTuees = 0;
         this.explorer = true;
@@ -91,5 +96,13 @@ public class Drone {
 
     public void setExplorer(boolean explorer) {
         this.explorer = explorer;
+    }
+
+    public String getDernierDeplacement() {
+        return dernierDeplacement;
+    }
+
+    public void setDernierDeplacement(String dernierDeplacement) {
+        this.dernierDeplacement = dernierDeplacement;
     }
 }

@@ -40,4 +40,12 @@ public class MapService {
         }
         return null;
     }
+
+    public static void reductionPheromone(List<Case> map){
+        for (Case cases : map){
+            if (!cases.getCoefPassage().equals(0.00)){
+                cases.setCoefPassage(cases.getCoefPassage()-0.01);
+            }
+        }
+    }
 }
