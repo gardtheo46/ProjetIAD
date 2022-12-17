@@ -22,10 +22,10 @@ public class RechercheService {
             if (caseActuelle.isCible()) {
                 caseActuelle.setCible(false);
                 drone.setCaseCible(null);
-                drone.setExplorer(true);
+                drone.setOccupe(false);
                 drone.setNbCiblesTuees(drone.getNbCiblesTuees() + 1);
             }
-            if (drone.isExplorer()) {
+            if (drone.isExplorer() && !drone.isOccupe()) {
                 //Examiner tout autour du robot grâce à la distance de vision
                 List<Case> caseAVoir = new ArrayList<>();
                 System.out.println(drone.getDernierDeplacement());
@@ -65,7 +65,7 @@ public class RechercheService {
                     if (cases != null) {
                         if (cases.isCible()) {
                             drone.setCaseCible(cases);
-                            drone.setExplorer(false);
+                            drone.setOccupe(true);
                             Integer distanceX = cases.getX() - drone.getCaseActuelle().getX();
                             Integer distanceY = cases.getY() - drone.getCaseActuelle().getY();
                             if (abs(distanceX) <= abs(distanceY)) {
@@ -180,7 +180,7 @@ public class RechercheService {
 
                 }
             } else {
-                if (drone.getCaseCible() != null) {
+                if (drone.getCaseCible() != null && drone.isOccupe()) {
                     // On se dirige sur la cible
                     //Tant que Lmax < ce que le drone à parcouru + ce qu’il doit parcourir pour rentrer (alignement abscisse et ordonnée)
                     Integer distanceX = drone.getCaseCible().getX() - drone.getCaseActuelle().getX();

@@ -48,4 +48,14 @@ public class MapService {
             }
         }
     }
+
+    public static Integer getNbCasesVisitees(List<Case> map) {
+        Integer nbCasesVisitees = 0;
+        for (Case cases : map){
+            if (cases.isDejaPasse()){
+                nbCasesVisitees++;
+            }
+        }
+        return nbCasesVisitees;
+    }
 }

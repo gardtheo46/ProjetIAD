@@ -6,6 +6,7 @@ import service.MapService;
 import service.RechercheService;
 import view.MapView;
 
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
@@ -27,8 +28,12 @@ public class Main {
         } while (!drone1.getCaseActuelle().equals(drone1.getCaseBase()) && !(drone2.getCaseActuelle().equals(drone2.getCaseBase())));
         MapView.mapView(map);
         System.out.println("");
-        System.out.println("Drone 1 : " + drone1.getNbCiblesTuees());
-        System.out.println("Drone 2 : " +drone2.getNbCiblesTuees());
+        System.out.println("***** CALCUL DE STATS *****");
+        Double tauxCouverture = (Double.valueOf(MapService.getNbCasesVisitees(map)) / Double.valueOf(map.size()))*100;
+        DecimalFormat df = new DecimalFormat("#.##");
+        System.out.println("Taux de couverture : "+df.format(tauxCouverture)+"%");
+        System.out.println("Nombre de cibles tuées par le drone 1 : "+drone1.getNbCiblesTuees());
+        System.out.println("Nombre de cibles tuées par le drone 1 : "+drone2.getNbCiblesTuees());
 //        System.out.println("Drone 3 : " +drone3.getNbCiblesTuees());
     }
 }

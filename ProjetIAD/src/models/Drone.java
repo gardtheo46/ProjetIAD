@@ -27,6 +27,8 @@ public class Drone {
 
     private Case caseCible;
 
+    private boolean occupe;
+
     public Drone(Integer porteeMax, Integer distanceVision, Case caseBase) {
         this.porteeMax = porteeMax;
         this.distanceVision = distanceVision;
@@ -36,6 +38,7 @@ public class Drone {
         this.distanceParcourue = 0;
         this.nbCiblesTuees = 0;
         this.explorer = true;
+        this.occupe = false;
         this.historiqueDeplacement = new ArrayList<>();
     }
 
@@ -117,5 +120,13 @@ public class Drone {
 
     public void setCaseCible(Case caseCible) {
         this.caseCible = caseCible;
+    }
+
+    public boolean isOccupe() {
+        return occupe;
+    }
+
+    public void setOccupe(boolean occupe) {
+        this.occupe = occupe;
     }
 }
