@@ -9,6 +9,6 @@ import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
-        List<Case> map = MapService.initMap(50,50);
+        List<Case> map = MapService.initMap(50,50, 20);
     }
 }
