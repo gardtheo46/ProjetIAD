@@ -11,12 +11,15 @@ public class Case {
 
     private boolean isCible;
 
+    private boolean isDejaPasse;
+
     public Case(Integer x,Integer y){
         this.x = x;
         this.y = y;
         this.isAvailable = true;
         this.coefPassage = 0.00;
         this.isCible = false;
+        this.isDejaPasse = false;
     }
 
     public Integer getX() {
@@ -65,5 +68,13 @@ public class Case {
                 "x=" + x +
                 ", y=" + y +
                 '}';
+    }
+
+    public boolean isDejaPasse() {
+        return isDejaPasse;
+    }
+
+    public void setDejaPasse(boolean dejaPasse) {
+        isDejaPasse = dejaPasse;
     }
 }

@@ -2,6 +2,9 @@ package models;
 
 import Constantes.ConstantesDeplacement;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Drone {
 
     private Integer porteeMax;
@@ -20,6 +23,10 @@ public class Drone {
 
     private boolean explorer;
 
+    private List<Case> historiqueDeplacement;
+
+    private Case caseCible;
+
     public Drone(Integer porteeMax, Integer distanceVision, Case caseBase) {
         this.porteeMax = porteeMax;
         this.distanceVision = distanceVision;
@@ -29,6 +36,7 @@ public class Drone {
         this.distanceParcourue = 0;
         this.nbCiblesTuees = 0;
         this.explorer = true;
+        this.historiqueDeplacement = new ArrayList<>();
     }
 
     public Integer getPorteeMax() {
@@ -93,5 +101,21 @@ public class Drone {
 
     public void setDernierDeplacement(String dernierDeplacement) {
         this.dernierDeplacement = dernierDeplacement;
+    }
+
+    public List<Case> getHistoriqueDeplacement() {
+        return historiqueDeplacement;
+    }
+
+    public void setHistoriqueDeplacement(List<Case> historiqueDeplacement) {
+        this.historiqueDeplacement = historiqueDeplacement;
+    }
+
+    public Case getCaseCible() {
+        return caseCible;
+    }
+
+    public void setCaseCible(Case caseCible) {
+        this.caseCible = caseCible;
     }
 }
