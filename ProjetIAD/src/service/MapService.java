@@ -34,7 +34,7 @@ public class MapService {
             if(cases.getX()==x && cases.getY()==y){
                 return cases;
             }
-
         }
+        return null;
     }
 }
