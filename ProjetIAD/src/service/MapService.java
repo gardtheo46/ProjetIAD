@@ -17,4 +17,6 @@ public class MapService {
         }
         return map;
     }
+
+    public Case getCase()
 }

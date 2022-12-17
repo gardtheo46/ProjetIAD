@@ -12,12 +12,21 @@ public class Drone {
 
     private Case caseActuelle;
 
+    private Integer distanceParcourue;
+
+    private Integer nbCiblesTuees;
+
+    private boolean explorer;
+
     public Drone(Integer porteeMax, Integer distanceToBase, Integer distanceVision, Case caseBase) {
         this.porteeMax = porteeMax;
         this.distanceToBase = distanceToBase;
         this.distanceVision = distanceVision;
         this.caseBase = caseBase;
         this.caseActuelle = caseBase;
+        this.distanceParcourue = 0;
+        this.nbCiblesTuees = 0;
+        this.explorer = true;
     }
 
     public Integer getPorteeMax() {
@@ -58,5 +67,29 @@ public class Drone {
 
     public void setCaseActuelle(Case caseActuelle) {
         this.caseActuelle = caseActuelle;
+    }
+
+    public Integer getDistanceParcourue() {
+        return distanceParcourue;
+    }
+
+    public void setDistanceParcourue(Integer distanceParcourue) {
+        this.distanceParcourue = distanceParcourue;
+    }
+
+    public Integer getNbCiblesTuees() {
+        return nbCiblesTuees;
+    }
+
+    public void setNbCiblesTuees(Integer nbCiblesTuees) {
+        this.nbCiblesTuees = nbCiblesTuees;
+    }
+
+    public boolean isExplorer() {
+        return explorer;
+    }
+
+    public void setExplorer(boolean explorer) {
+        this.explorer = explorer;
     }
 }
