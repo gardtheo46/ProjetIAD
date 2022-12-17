@@ -7,7 +7,7 @@ import java.util.List;
 
 public class MapService {
 
-    public List<Case> initMap(Integer nbCasesX, Integer nbCasesY){
+    public static List<Case> initMap(Integer nbCasesX, Integer nbCasesY){
         List<Case> map = new ArrayList<>();
         //Création des cases
         for (int i=0;i<=50;i++){
@@ -18,5 +18,23 @@ public class MapService {
         return map;
     }
 
-    public Case getCase()
+
+
+
+
+
+
+
+
+
+
+
+    public static Case getCase(List<Case> map, Integer x, Integer y){
+        for (Case cases : map){
+            if(cases.getX()==x && cases.getY()==y){
+                return cases;
+            }
+
+        }
+    }
 }
