@@ -32,123 +32,123 @@ public class RechercheService {
                     case ConstantesDeplacement.AUCUN:
                     case ConstantesDeplacement.HAUT:
                         for (int i = 1; i <= drone.getDistanceVision(); i++) {
-                            switch(i){
+                            switch (i) {
                                 case 1:
                                     caseAVoir.add(MapService.getCase(map, xActuel, yActuel + i));
                                     break;
                                 case 2:
-                                    caseAVoir.add(MapService.getCase(map, xActuel-1, yActuel + i));
+                                    caseAVoir.add(MapService.getCase(map, xActuel - 1, yActuel + i));
                                     caseAVoir.add(MapService.getCase(map, xActuel, yActuel + i));
-                                    caseAVoir.add(MapService.getCase(map, xActuel+1, yActuel + i));
+                                    caseAVoir.add(MapService.getCase(map, xActuel + 1, yActuel + i));
                                     break;
                                 case 3:
-                                    caseAVoir.add(MapService.getCase(map, xActuel-2, yActuel + i));
-                                    caseAVoir.add(MapService.getCase(map, xActuel-1, yActuel + i));
+                                    caseAVoir.add(MapService.getCase(map, xActuel - 2, yActuel + i));
+                                    caseAVoir.add(MapService.getCase(map, xActuel - 1, yActuel + i));
                                     caseAVoir.add(MapService.getCase(map, xActuel, yActuel + i));
-                                    caseAVoir.add(MapService.getCase(map, xActuel+1, yActuel + i));
-                                    caseAVoir.add(MapService.getCase(map, xActuel+2, yActuel + i));
+                                    caseAVoir.add(MapService.getCase(map, xActuel + 1, yActuel + i));
+                                    caseAVoir.add(MapService.getCase(map, xActuel + 2, yActuel + i));
                                     break;
                                 case 4:
-                                    caseAVoir.add(MapService.getCase(map, xActuel-3, yActuel + i));
-                                    caseAVoir.add(MapService.getCase(map, xActuel-2, yActuel + i));
-                                    caseAVoir.add(MapService.getCase(map, xActuel-1, yActuel + i));
+                                    caseAVoir.add(MapService.getCase(map, xActuel - 3, yActuel + i));
+                                    caseAVoir.add(MapService.getCase(map, xActuel - 2, yActuel + i));
+                                    caseAVoir.add(MapService.getCase(map, xActuel - 1, yActuel + i));
                                     caseAVoir.add(MapService.getCase(map, xActuel, yActuel + i));
-                                    caseAVoir.add(MapService.getCase(map, xActuel+1, yActuel + i));
-                                    caseAVoir.add(MapService.getCase(map, xActuel+2, yActuel + i));
-                                    caseAVoir.add(MapService.getCase(map, xActuel+3, yActuel + i));
+                                    caseAVoir.add(MapService.getCase(map, xActuel + 1, yActuel + i));
+                                    caseAVoir.add(MapService.getCase(map, xActuel + 2, yActuel + i));
+                                    caseAVoir.add(MapService.getCase(map, xActuel + 3, yActuel + i));
                                     break;
                                 case 5:
-                                    caseAVoir.add(MapService.getCase(map, xActuel-4, yActuel + i));
-                                    caseAVoir.add(MapService.getCase(map, xActuel-3, yActuel + i));
-                                    caseAVoir.add(MapService.getCase(map, xActuel-2, yActuel + i));
-                                    caseAVoir.add(MapService.getCase(map, xActuel-1, yActuel + i));
+                                    caseAVoir.add(MapService.getCase(map, xActuel - 4, yActuel + i));
+                                    caseAVoir.add(MapService.getCase(map, xActuel - 3, yActuel + i));
+                                    caseAVoir.add(MapService.getCase(map, xActuel - 2, yActuel + i));
+                                    caseAVoir.add(MapService.getCase(map, xActuel - 1, yActuel + i));
                                     caseAVoir.add(MapService.getCase(map, xActuel, yActuel + i));
-                                    caseAVoir.add(MapService.getCase(map, xActuel+1, yActuel + i));
-                                    caseAVoir.add(MapService.getCase(map, xActuel+2, yActuel + i));
-                                    caseAVoir.add(MapService.getCase(map, xActuel+3, yActuel + i));
-                                    caseAVoir.add(MapService.getCase(map, xActuel+4, yActuel + i));
+                                    caseAVoir.add(MapService.getCase(map, xActuel + 1, yActuel + i));
+                                    caseAVoir.add(MapService.getCase(map, xActuel + 2, yActuel + i));
+                                    caseAVoir.add(MapService.getCase(map, xActuel + 3, yActuel + i));
+                                    caseAVoir.add(MapService.getCase(map, xActuel + 4, yActuel + i));
                                     break;
                             }
                         }
                         break;
                     case ConstantesDeplacement.BAS:
                         for (int i = 1; i <= drone.getDistanceVision(); i++) {
-                            switch(i){
+                            switch (i) {
                                 case 1:
                                     caseAVoir.add(MapService.getCase(map, xActuel, yActuel - i));
                                     break;
                                 case 2:
-                                    caseAVoir.add(MapService.getCase(map, xActuel-1, yActuel - i));
+                                    caseAVoir.add(MapService.getCase(map, xActuel - 1, yActuel - i));
                                     caseAVoir.add(MapService.getCase(map, xActuel, yActuel - i));
-                                    caseAVoir.add(MapService.getCase(map, xActuel+1, yActuel - i));
+                                    caseAVoir.add(MapService.getCase(map, xActuel + 1, yActuel - i));
                                     break;
                                 case 3:
-                                    caseAVoir.add(MapService.getCase(map, xActuel-2, yActuel - i));
-                                    caseAVoir.add(MapService.getCase(map, xActuel-1, yActuel - i));
+                                    caseAVoir.add(MapService.getCase(map, xActuel - 2, yActuel - i));
+                                    caseAVoir.add(MapService.getCase(map, xActuel - 1, yActuel - i));
                                     caseAVoir.add(MapService.getCase(map, xActuel, yActuel - i));
-                                    caseAVoir.add(MapService.getCase(map, xActuel+1, yActuel - i));
-                                    caseAVoir.add(MapService.getCase(map, xActuel+2, yActuel - i));
+                                    caseAVoir.add(MapService.getCase(map, xActuel + 1, yActuel - i));
+                                    caseAVoir.add(MapService.getCase(map, xActuel + 2, yActuel - i));
                                     break;
                                 case 4:
-                                    caseAVoir.add(MapService.getCase(map, xActuel-3, yActuel - i));
-                                    caseAVoir.add(MapService.getCase(map, xActuel-2, yActuel - i));
-                                    caseAVoir.add(MapService.getCase(map, xActuel-1, yActuel - i));
+                                    caseAVoir.add(MapService.getCase(map, xActuel - 3, yActuel - i));
+                                    caseAVoir.add(MapService.getCase(map, xActuel - 2, yActuel - i));
+                                    caseAVoir.add(MapService.getCase(map, xActuel - 1, yActuel - i));
                                     caseAVoir.add(MapService.getCase(map, xActuel, yActuel - i));
-                                    caseAVoir.add(MapService.getCase(map, xActuel+1, yActuel - i));
-                                    caseAVoir.add(MapService.getCase(map, xActuel+2, yActuel - i));
-                                    caseAVoir.add(MapService.getCase(map, xActuel+3, yActuel - i));
+                                    caseAVoir.add(MapService.getCase(map, xActuel + 1, yActuel - i));
+                                    caseAVoir.add(MapService.getCase(map, xActuel + 2, yActuel - i));
+                                    caseAVoir.add(MapService.getCase(map, xActuel + 3, yActuel - i));
                                     break;
                                 case 5:
-                                    caseAVoir.add(MapService.getCase(map, xActuel-4, yActuel - i));
-                                    caseAVoir.add(MapService.getCase(map, xActuel-3, yActuel - i));
-                                    caseAVoir.add(MapService.getCase(map, xActuel-2, yActuel - i));
-                                    caseAVoir.add(MapService.getCase(map, xActuel-1, yActuel - i));
+                                    caseAVoir.add(MapService.getCase(map, xActuel - 4, yActuel - i));
+                                    caseAVoir.add(MapService.getCase(map, xActuel - 3, yActuel - i));
+                                    caseAVoir.add(MapService.getCase(map, xActuel - 2, yActuel - i));
+                                    caseAVoir.add(MapService.getCase(map, xActuel - 1, yActuel - i));
                                     caseAVoir.add(MapService.getCase(map, xActuel, yActuel - i));
-                                    caseAVoir.add(MapService.getCase(map, xActuel+1, yActuel - i));
-                                    caseAVoir.add(MapService.getCase(map, xActuel+2, yActuel - i));
-                                    caseAVoir.add(MapService.getCase(map, xActuel+3, yActuel - i));
-                                    caseAVoir.add(MapService.getCase(map, xActuel+4, yActuel - i));
+                                    caseAVoir.add(MapService.getCase(map, xActuel + 1, yActuel - i));
+                                    caseAVoir.add(MapService.getCase(map, xActuel + 2, yActuel - i));
+                                    caseAVoir.add(MapService.getCase(map, xActuel + 3, yActuel - i));
+                                    caseAVoir.add(MapService.getCase(map, xActuel + 4, yActuel - i));
                                     break;
                             }
                         }
                         break;
                     case ConstantesDeplacement.GAUCHE:
                         for (int i = 1; i <= drone.getDistanceVision(); i++) {
-                            switch(i){
+                            switch (i) {
                                 case 1:
                                     caseAVoir.add(MapService.getCase(map, xActuel - i, yActuel));
                                     break;
                                 case 2:
-                                    caseAVoir.add(MapService.getCase(map, xActuel- i, yActuel-1));
-                                    caseAVoir.add(MapService.getCase(map, xActuel- i, yActuel));
-                                    caseAVoir.add(MapService.getCase(map, xActuel- i, yActuel+1));
+                                    caseAVoir.add(MapService.getCase(map, xActuel - i, yActuel - 1));
+                                    caseAVoir.add(MapService.getCase(map, xActuel - i, yActuel));
+                                    caseAVoir.add(MapService.getCase(map, xActuel - i, yActuel + 1));
                                     break;
                                 case 3:
-                                    caseAVoir.add(MapService.getCase(map, xActuel- i, yActuel - 2));
-                                    caseAVoir.add(MapService.getCase(map, xActuel- i, yActuel - 1));
-                                    caseAVoir.add(MapService.getCase(map, xActuel- i, yActuel));
-                                    caseAVoir.add(MapService.getCase(map, xActuel- i, yActuel +1));
-                                    caseAVoir.add(MapService.getCase(map, xActuel- i, yActuel +2));
+                                    caseAVoir.add(MapService.getCase(map, xActuel - i, yActuel - 2));
+                                    caseAVoir.add(MapService.getCase(map, xActuel - i, yActuel - 1));
+                                    caseAVoir.add(MapService.getCase(map, xActuel - i, yActuel));
+                                    caseAVoir.add(MapService.getCase(map, xActuel - i, yActuel + 1));
+                                    caseAVoir.add(MapService.getCase(map, xActuel - i, yActuel + 2));
                                     break;
                                 case 4:
-                                    caseAVoir.add(MapService.getCase(map, xActuel- i, yActuel - 3));
-                                    caseAVoir.add(MapService.getCase(map, xActuel- i, yActuel - 2));
-                                    caseAVoir.add(MapService.getCase(map, xActuel- i, yActuel - 1));
-                                    caseAVoir.add(MapService.getCase(map, xActuel- i, yActuel ));
-                                    caseAVoir.add(MapService.getCase(map, xActuel- i, yActuel +1));
-                                    caseAVoir.add(MapService.getCase(map, xActuel- i, yActuel +2));
-                                    caseAVoir.add(MapService.getCase(map, xActuel- i, yActuel +3));
+                                    caseAVoir.add(MapService.getCase(map, xActuel - i, yActuel - 3));
+                                    caseAVoir.add(MapService.getCase(map, xActuel - i, yActuel - 2));
+                                    caseAVoir.add(MapService.getCase(map, xActuel - i, yActuel - 1));
+                                    caseAVoir.add(MapService.getCase(map, xActuel - i, yActuel));
+                                    caseAVoir.add(MapService.getCase(map, xActuel - i, yActuel + 1));
+                                    caseAVoir.add(MapService.getCase(map, xActuel - i, yActuel + 2));
+                                    caseAVoir.add(MapService.getCase(map, xActuel - i, yActuel + 3));
                                     break;
                                 case 5:
-                                    caseAVoir.add(MapService.getCase(map, xActuel- i, yActuel - 4));
-                                    caseAVoir.add(MapService.getCase(map, xActuel- i, yActuel - 3));
-                                    caseAVoir.add(MapService.getCase(map, xActuel- i, yActuel - 2));
-                                    caseAVoir.add(MapService.getCase(map, xActuel- i, yActuel - 1));
-                                    caseAVoir.add(MapService.getCase(map, xActuel- i, yActuel));
-                                    caseAVoir.add(MapService.getCase(map, xActuel- i, yActuel +1));
-                                    caseAVoir.add(MapService.getCase(map, xActuel- i, yActuel +2));
-                                    caseAVoir.add(MapService.getCase(map, xActuel- i, yActuel +3));
-                                    caseAVoir.add(MapService.getCase(map, xActuel- i, yActuel +4));
+                                    caseAVoir.add(MapService.getCase(map, xActuel - i, yActuel - 4));
+                                    caseAVoir.add(MapService.getCase(map, xActuel - i, yActuel - 3));
+                                    caseAVoir.add(MapService.getCase(map, xActuel - i, yActuel - 2));
+                                    caseAVoir.add(MapService.getCase(map, xActuel - i, yActuel - 1));
+                                    caseAVoir.add(MapService.getCase(map, xActuel - i, yActuel));
+                                    caseAVoir.add(MapService.getCase(map, xActuel - i, yActuel + 1));
+                                    caseAVoir.add(MapService.getCase(map, xActuel - i, yActuel + 2));
+                                    caseAVoir.add(MapService.getCase(map, xActuel - i, yActuel + 3));
+                                    caseAVoir.add(MapService.getCase(map, xActuel - i, yActuel + 4));
                                     break;
                             }
                         }

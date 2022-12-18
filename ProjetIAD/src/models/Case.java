@@ -13,7 +13,7 @@ public class Case {
 
     private boolean isDejaPasse;
 
-    public Case(Integer x,Integer y){
+    public Case(Integer x, Integer y) {
         this.x = x;
         this.y = y;
         this.isAvailable = true;
